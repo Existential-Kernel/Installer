@@ -1,5 +1,4 @@
 install:
-	echo "hello world"
 	
 # GNOME stuff
 	sudo dnf install -y gnome-extensions-app gnome-tweaks
