@@ -7,8 +7,8 @@ install:
 # RPM 
 	sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf upgrade --refresh
-	sudo dnf groupupdate core
+	sudo dnf upgrade -y --refresh
+	sudo dnf groupupdate -y core
 	sudo dnf install -y rpmfusion-free-release-tainted
 	sudo dnf install -y dnf-plugins-core
 
@@ -42,11 +42,11 @@ install:
 	sudo ln -s /var/lib/snapd/snap /snap
 
 # Upgrade and reboot
-	sudo dnf upgrade --refresh
+	sudo dnf upgrade -y --refresh
 	sudo dnf check
-	sudo dnf autoremove
+	sudo dnf autoremove -y
 	sudo fwupdmgr get-devices
 	sudo fwupdmgr refresh --force
 	sudo fwupdmgr get-updates
 	sudo fwupdmgr update
-	sudo reboot now
+	systemctl reboot
