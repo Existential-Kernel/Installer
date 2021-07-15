@@ -5,11 +5,11 @@ install:
 	sudo dnf install -y gnome-shell-extension-appindicator
 
 # RPM 
-	sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#	sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf upgrade -y --refresh
 	sudo dnf groupupdate -y core
-	sudo dnf install -y rpmfusion-free-release-tainted
+#	sudo dnf install -y rpmfusion-free-release-tainted
 	sudo dnf install -y dnf-plugins-core
 
 # Flatpak
@@ -40,6 +40,8 @@ install:
 # Snap
 	sudo dnf install -y snapd
 	sudo ln -s /var/lib/snapd/snap /snap
+
+# Misc
 
 # Upgrade and reboot
 	sudo dnf upgrade -y --refresh
