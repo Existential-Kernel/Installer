@@ -24,6 +24,7 @@ install:
 	flatpak install -y flathub com.visualstudio.code
 	flatpak install -y flathub org.qbittorrent.qBittorrent
 	flatpak install -y flathub com.jetbrains.CLion
+	flatpak install -y flathub io.github.seadve.Kooha
 
 # Software
 	sudo dnf -y install ffmpeg
