@@ -5,7 +5,7 @@ install:
 	sudo dnf install -y gnome-shell-extension-appindicator
 
 # RPM 
-#	sudo dnf install -y  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#	sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 #	sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	sudo dnf upgrade -y --refresh
 	sudo dnf groupupdate -y core
@@ -24,6 +24,10 @@ install:
 	flatpak install -y flathub com.visualstudio.code
 	flatpak install -y flathub org.qbittorrent.qBittorrent
 	flatpak install -y flathub com.jetbrains.CLion
+
+# Software
+	sudo dnf -y install ffmpeg
+	sudo dnf -y install ffmpeg-devel
 
 # nvidia driver wizardry stuff idk
 	sudo dnf install -y akmod-nvidia
@@ -54,9 +58,34 @@ install:
 	gpgkey=https://www.virtualbox.org/download/oracle_vbox.asc
 	EOF
 	sudo dnf search -y virtualbox
-	sudo dnf install VirtualBox-6.1
+	sudo dnf install -y VirtualBox-6.1
 
-# Misc
+# Folders
+	mkdir ~/Documents/Repositories
+	mkdir ~/Documents/Cloned\ repositories
+	mkdir ~/Documents/Repositories
+
+	mkdir ~/Downloads/Pirated\ stuff
+	mkdir ~/Downloads/RPM\ files
+	mkdir ~/Downloads/Flatpak
+	mkdir ~/Downloads/ISO files
+
+	mkdir ~/Pictures/Image\ memes
+
+	mkdir ~/Videos/Video\ memes
+
+# Crontab
+	sudo dnf install -y cronie
+	systemctl start crond.service
+	systemctl enable crond.service
+	crontab -l > mycron
+	echo "*/20 * * * * mv ~/Downloads/*.mp4 ~/Videos/Video\ Memes" >> mycron
+	echo "*/20 * * * * mv ~/Downloads/*.mov ~/Videos/Video\ Memes" >> mycron
+	echo "*/20 * * * * mv ~/Downloads/*.webm ~/Videos/Video\ Memes" >> mycron
+	echo "0 */1 * * * mv ~/*.mp3 ~/Music" >> mycron
+	echo "0 */3 * * * sudo dnf update -y && sudo dnf upgrade -y" >> mycron
+	crontab mycron
+	rm mycron
 
 # Upgrade and reboot
 	sudo dnf upgrade -y --refresh
