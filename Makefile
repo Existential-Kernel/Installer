@@ -69,7 +69,7 @@ install:
 	mkdir ~/Downloads/Pirated\ stuff
 	mkdir ~/Downloads/RPM\ files
 	mkdir ~/Downloads/Flatpak
-	mkdir ~/Downloads/ISO files
+	mkdir ~/Downloads/ISO\ files
 
 	mkdir ~/Pictures/Image\ memes
 
