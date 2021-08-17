@@ -22,5 +22,5 @@ git clone https://github.com/Existential-nonce/Fedora-Startup
 ## Fedora software installation:
 ```bash 
 cd Fedora-Startup/
-sudo make
+make
 ```
