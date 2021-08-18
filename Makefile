@@ -1,5 +1,8 @@
 all: folders GNOME RPM flatpak flatpak_software ffmpeg NVIDIA DNF snap crontab wine github systemctl
 
+update:
+	sudo dnf update -y
+
 folders:
 	sudo chmod u+x shell/folders.sh
 	./shell/folders.sh
