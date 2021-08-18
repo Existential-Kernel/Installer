@@ -43,11 +43,17 @@ ffmpeg:
 	sudo dnf -y install ffmpeg-devel
 
 NVIDIA:
-	sudo dnf install -y akmod-nvidia
-	sudo dnf install -y xorg-x11-drv-nvidia-cuda
-	sudo dnf install -y xorg-x11-drv-nvidia-cuda-libs
-	sudo dnf install -y vdpauinfo libva-vdpau-driver libva-utils
-	sudo dnf install -y vulkan
+	sudo dnf install dnf-plugins-core -y
+	sudo dnf copr enable t0xic0der/nvidia-auto-installer-for-fedora -y
+	sudo dnf install nvautoinstall -y
+	
+	sudo nvautoinstall --rpmadd
+	sudo nvautoinstall --driver
+	sudo nvautoinstall --x86lib
+	sudo nvautoinstall --nvrepo
+	sudo nvautoinstall --plcuda
+	sudo nvautoinstall --vulkan
+	sudo nvautoinstall --ffmpeg
 
 DNF:
 	echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
