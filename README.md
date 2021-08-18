@@ -1,6 +1,6 @@
 
 <h1 align="center">Fedora-Startup</h1>
-<p align="center">A personal Makefile script to install some software from a fresh installation of fedora whenever I fuck up things on my OS and need to reinstall the whole fucking thing</p>
+<p align="center">A personal Makefile script to install some software from a fresh installation of fedora whenever I mess up things on my OS and need to reinstall the whole fucking thing</p>
 <p align="center">
     <img alt="GitHub last commit" align="center" src="https://img.shields.io/github/last-commit/existential-nonce/fedora-startup">
     <img alt="GitHub code size in bytes" align="center" src="https://img.shields.io/github/languages/code-size/existential-nonce/fedora-startup">
