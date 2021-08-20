@@ -6,4 +6,5 @@ cd ~/Documents/Repositories
 	git clone https://github.com/Existential-nonce/Cursed-RPC
 	git clone https://github.com/Existential-nonce/Existential-nonce
 	git clone https://github.com/Existential-nonce/Existential-nonce
-cd 
+cd ~/Documents/Cloned\ Repositories
+	git clone https://github.com/mtoyoda/sl.git

@@ -9,10 +9,6 @@
 
 ## Prerequesites:
 - enable third party repositories by going to `Software > Software Repositories > Third Party Repositories` then enable all
-- Make sure to update packages with 
-```bash
-sudo dnf update -y
-```
 
 ## Download:
 ```bash

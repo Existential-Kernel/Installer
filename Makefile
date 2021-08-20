@@ -1,4 +1,4 @@
-all: folders GNOME RPM flatpak flatpak_software ffmpeg NVIDIA DNF snap crontab wine github systemctl
+all: update folders GNOME RPM flatpak flatpak_software vscode extensions ffmpeg xcalib NVIDIA DNF snap crontab wine github systemctl
 
 update:
 	sudo dnf clean all
@@ -28,7 +28,6 @@ flatpak_software:
 	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.valvesoftware.Steam
 	flatpak install -y flathub com.github.micahflee.torbrowser-launcher
-	flatpak install -y flathub com.visualstudio.code
 	flatpak install -y flathub org.qbittorrent.qBittorrent
 	flatpak install -y flathub com.jetbrains.CLion
 	flatpak install -y flathub io.github.seadve.Kooha
@@ -38,9 +37,46 @@ flatpak_software:
 	flatpak install -y flathub com.github.reds.LogisimEvolution
 	flatpak install -y flathub com.axosoft.GitKraken
 
+vscode:
+	echo "[vscode]" >> /etc/yum.repos.d/vscode.repo
+	echo "name=Visual Studio Code" >> /etc/yum.repos.d/vscode.repo
+	echo "baseurl=https://packages.microsoft.com/yumrepos/vscode" >> /etc/yum.repos.d/vscode.repo
+	echo "enabled=1" >> /etc/yum.repos.d/vscode.repo
+	echo "gpgcheck=1" >> /etc/yum.repos.d/vscode.repo
+	echo "gpgkey=https://packages.microsoft.com/keys/microsoft.asc" >> /etc/yum.repos.d/vscode.repo
+
+	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+	sudo dnf -y install code
+
+extensions:
+	code --install-extension ms-vscode.cpptools
+	code --install-extension akhail.save-typing
+	code --install-extension pkief.material-icon-theme
+	code --install-extension formulahendry.code-runner
+	code --install-extension vscode.powershell
+	code --install-extension eg2.vscode-npm-script
+	code --install-extension github.vscode-pull-request-github
+	code --install-extension naumovs.color-highlight
+	code --install-extension ms-vscode.cmake-tools
+	code --install-extension twxs.cmake
+	code --install-extension aaron-bond.better-comments
+	code --install-extension mikestead.dotenv
+	code --install-extension yzhang.markdown-all-in-one
+	code --install-extension danielpinto8zz6.c-cpp-compile-run
+	code --install-extension james-yu.latex-workshop
+	code --install-extension mhutchie.git-graph
+	code --install-extension jeff-hykin.better-cpp-syntax
+	code --install-extension damien.autoit
+	code --install-extension mshr-h.veriloghdl
+	code --install-extension kriegalex.vscode-cudacpp
+
 ffmpeg:
 	sudo dnf -y install ffmpeg
 	sudo dnf -y install ffmpeg-devel
+
+xcalib:
+	sudo yum install xcalib -y
+	alias invert="xcalib -invert -alter"
 
 NVIDIA:
 	sudo dnf install dnf-plugins-core -y
