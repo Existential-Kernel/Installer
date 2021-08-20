@@ -51,6 +51,8 @@ vscode:
 extensions:
 	code --install-extension ms-vscode.cpptools
 	code --install-extension akhail.save-typing
+	code --install-extension gruntfuggly.discord-chat
+	code --install-extension icrawl.discord-vscode
 	code --install-extension pkief.material-icon-theme
 	code --install-extension formulahendry.code-runner
 	code --install-extension vscode.powershell
