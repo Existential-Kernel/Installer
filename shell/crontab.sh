@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo dnf install -y cronie
 systemctl enable crond.service
 sudo crontab -l > mycron

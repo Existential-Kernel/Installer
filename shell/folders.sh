@@ -1,7 +1,7 @@
 #!/bin/bash
-
 mkdir /home/$USER/Documents/Repositories
 mkdir /home/$USER/Documents/Cloned\ repositories
+mkdir /home/$USER/Documents/Hardware
 
 mkdir /home/$USER/Downloads/Pirated\ stuff
 mkdir /home/$USER/Downloads/RPM\ files

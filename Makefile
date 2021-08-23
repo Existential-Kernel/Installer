@@ -1,4 +1,4 @@
-all: update folders GNOME RPM flatpak flatpak_software vscode extensions ffmpeg xcalib NVIDIA DNF snap crontab wine github systemctl
+all: update folders GNOME RPM flatpak flatpak_software vscode extensions software NVIDIA DNF snap crontab wine github systemctl
 
 update:
 	sudo dnf clean all
@@ -25,7 +25,6 @@ flatpak:
 
 flatpak_software:
 	flatpak install -y flathub com.spotify.Client
-	flatpak install -y flathub com.discordapp.Discord
 	flatpak install -y flathub com.valvesoftware.Steam
 	flatpak install -y flathub com.github.micahflee.torbrowser-launcher
 	flatpak install -y flathub org.qbittorrent.qBittorrent
@@ -51,7 +50,6 @@ vscode:
 extensions:
 	code --install-extension ms-vscode.cpptools
 	code --install-extension akhail.save-typing
-	code --install-extension gruntfuggly.discord-chat
 	code --install-extension icrawl.discord-vscode
 	code --install-extension pkief.material-icon-theme
 	code --install-extension formulahendry.code-runner
@@ -71,17 +69,17 @@ extensions:
 	code --install-extension mshr-h.veriloghdl
 	code --install-extension kriegalex.vscode-cudacpp
 
-ffmpeg:
+software:
 	sudo dnf -y install ffmpeg
 	sudo dnf -y install ffmpeg-devel
 
-xcalib:
 	sudo yum install xcalib -y
 	alias invert="xcalib -invert -alter"
 
-powershell:
 	sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 	sudo yum install -y powershell
+
+	sudo dnf -y install discord
 
 NVIDIA:
 	sudo dnf install dnf-plugins-core -y
@@ -120,6 +118,10 @@ wine:
 github:
 	sudo chmod u+x shell/github.sh
 	./shell/github.sh
+
+Xorg:
+	sudo chmod u+x shell/xorg.sh
+	./shell/xorg.sh
 
 systemctl:
 	sudo dnf upgrade -y --refresh
