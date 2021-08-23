@@ -55,7 +55,6 @@ extensions:
 	code --install-extension icrawl.discord-vscode
 	code --install-extension pkief.material-icon-theme
 	code --install-extension formulahendry.code-runner
-	code --install-extension vscode.powershell
 	code --install-extension eg2.vscode-npm-script
 	code --install-extension github.vscode-pull-request-github
 	code --install-extension naumovs.color-highlight
@@ -79,6 +78,10 @@ ffmpeg:
 xcalib:
 	sudo yum install xcalib -y
 	alias invert="xcalib -invert -alter"
+
+powershell:
+	sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
+	sudo yum install -y powershell
 
 NVIDIA:
 	sudo dnf install dnf-plugins-core -y
