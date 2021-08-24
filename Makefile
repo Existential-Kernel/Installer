@@ -1,4 +1,4 @@
-all: update folders GNOME RPM flatpak flatpak_software vscode extensions software NVIDIA DNF snap crontab wine github systemctl
+all: update folders GNOME RPM flatpak flatpak_software vscode extensions software NVIDIA DNF snap crontab wine github Xorg systemctl
 
 update:
 	sudo dnf clean all
