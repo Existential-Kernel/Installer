@@ -8,3 +8,4 @@ cd ~/Documents/Repositories
 	git clone https://github.com/Existential-nonce/Existential-nonce
 cd ~/Documents/Cloned\ Repositories
 	git clone https://github.com/mtoyoda/sl.git
+        git clone https://github.com/pystardust/ani-cli.git
