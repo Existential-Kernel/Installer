@@ -9,6 +9,7 @@ cd ~/Documents/Repositories
 cd ~/Documents/Cloned\ Repositories
 	git clone https://github.com/mtoyoda/sl.git
 	git clone https://github.com/jagannatharjun/qbt-theme.git
+	git clone https://github.com/pystardust/ani-cli.git
 	git clone https://github.com/jasonniebauer/Nmap-Cheatsheet.git
 	git clone https://github.com/cli/cli.git
 	mkdir tools 
