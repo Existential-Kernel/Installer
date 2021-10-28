@@ -35,6 +35,11 @@ flatpak_software:
 	flatpak install -y flathub org.gnome.GHex
 	flatpak install -y flathub com.github.reds.LogisimEvolution
 	flatpak install -y flathub com.axosoft.GitKraken
+	flatpak install -y flathub io.qt.QtCreator
+	flatpak install -y flathub org.librepcb.LibrePCB
+	flatpak install -y flathub io.github.shiftey.Desktop
+	flatpak install -y flathub io.github.Figma_Linux.figma_linux
+	flatpak install -y flathub org.gimp.GIMP
 
 vscode:
 	echo "[vscode]" >> /etc/yum.repos.d/vscode.repo
@@ -60,7 +65,7 @@ extensions:
 	code --install-extension twxs.cmake
 	code --install-extension aaron-bond.better-comments
 	code --install-extension mikestead.dotenv
-	code --install-extension yzhang.markdown-all-in-one
+	code --install-extension bierner.markdown-preview-github-styles
 	code --install-extension danielpinto8zz6.c-cpp-compile-run
 	code --install-extension james-yu.latex-workshop
 	code --install-extension mhutchie.git-graph
@@ -68,18 +73,25 @@ extensions:
 	code --install-extension damien.autoit
 	code --install-extension mshr-h.veriloghdl
 	code --install-extension kriegalex.vscode-cudacpp
+	code --install-extension tialki.tex-preview
+	code --install-extension jeff-tian.tex-workshop
+	code --install-extension tomoki1207.pdf
+	code --install-extension ms-vscode.makefile-tools
+	code --install-extension 13xforever.language-x86-64-assembly
+	code --install-extension xsro.masm-tasm
+	code --install-extension azuretools.vscode-docker
+	code --install-extension teledemic.branch-warnings
 
 software:
 	sudo dnf -y install ffmpeg
 	sudo dnf -y install ffmpeg-devel
-
 	sudo yum install xcalib -y
-	alias invert="xcalib -invert -alter"
-
 	sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 	sudo yum install -y powershell
-
 	sudo dnf -y install discord
+	sudo dnf -y install steam
+	sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+	sudo dnf -y install gh
 
 NVIDIA:
 	sudo dnf install dnf-plugins-core -y
