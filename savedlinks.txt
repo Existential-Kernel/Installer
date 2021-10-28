@@ -1,0 +1,1 @@
+https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Fedora&target_version=34&target_type=rpm_local
