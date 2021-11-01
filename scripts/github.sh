@@ -12,6 +12,31 @@ cd ~/Documents/Cloned\ Repositories
 	git clone https://github.com/pystardust/ani-cli.git
 	git clone https://github.com/jasonniebauer/Nmap-Cheatsheet.git
 	git clone https://github.com/cli/cli.git
+	git clone https://github.com/aristocratos/btop.git
+	git clone https://github.com/pystardust/ani-cli.git
+	git clone https://github.com/KURO-CODE/DoxTracker
+	git clone https://github.com/cfenollosa/os-tutorial.git
+	git clone https://github.com/jagannatharjun/qbt-theme.git
+	git clone https://github.com/bluefeversoft/Vice_Chess_Engine.git
+	git clone https://github.com/taylorconor/tinytetris.git
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	git clone
+	
 	mkdir tools 
 	cd tools
 	git clone https://github.com/Cryptonian007/Garuda.git
