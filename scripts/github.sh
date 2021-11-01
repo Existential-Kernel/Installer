@@ -19,24 +19,6 @@ cd ~/Documents/Cloned\ Repositories
 	git clone https://github.com/jagannatharjun/qbt-theme.git
 	git clone https://github.com/bluefeversoft/Vice_Chess_Engine.git
 	git clone https://github.com/taylorconor/tinytetris.git
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	git clone
-	
 	mkdir tools 
 	cd tools
 	git clone https://github.com/Cryptonian007/Garuda.git
