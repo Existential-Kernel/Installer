@@ -105,6 +105,11 @@ NVIDIA:
 	sudo nvautoinstall --plcuda
 	sudo nvautoinstall --vulkan
 	sudo nvautoinstall --ffmpeg
+	
+CUDA:
+	export CUDA_HOME=/usr/local/cuda
+	export PATH=${CUDA_HOME}/bin:${PATH}
+	export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 
 DNF:
 	echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
