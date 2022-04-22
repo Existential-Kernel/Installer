@@ -111,6 +111,20 @@ CUDA:
 	export PATH=${CUDA_HOME}/bin:${PATH}
 	export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 
+discord:
+	echo "{" >> ~/.config/discord/settings.json 
+	echo '"BACKGROUND_COLOR": "#202225",' >> ~/.config/discord/settings.json
+	echo '"IS_MAXIMIZED": false,' >> ~/.config/discord/settings.json
+	echo '"IS_MINIMIZED": false,' >> ~/.config/discord/settings.json
+	echo '"DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true,' >> ~/.config/discord/settings.json
+	echo '"WINDOW_BOUNDS": {' >> ~/.config/discord/settings.json
+	echo '"x": 320,' >> ~/.config/discord/settings.json
+	echo '"y": 270,' >> ~/.config/discord/settings.json
+	echo '"width": 1280,' >> ~/.config/discord/settings.json
+	echo '"height": 720' >> ~/.config/discord/settings.json
+	echo '}' >> ~/.config/discord/settings.json
+	echo '}' >> ~/.config/discord/settings.json
+
 DNF:
 	echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
 	echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
